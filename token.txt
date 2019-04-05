@@ -1,6 +1,6 @@
-1a0cf5d52886dab6a55d356484c61b715a83cc29
 
-ACC_TOKEN: d5433f9ab6a0ca4bda017b5
+
+ACC_TOKEN: 
 BRANCH: gh-pages
 GH_REF: github.com/wangding/{repos_name}
 USER_EMAIL: 408542507@qq.com
