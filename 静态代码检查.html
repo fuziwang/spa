@@ -1,0 +1,612 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>静态代码检查 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="单元测试.html" />
+    
+    
+    <link rel="prev" href="自动化构建.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="自动化构建.html">
+            
+                <a href="自动化构建.html">
+            
+                    
+                    自动化构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="静态代码检查.html">
+            
+                <a href="静态代码检查.html">
+            
+                    
+                    静态代码检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="单元测试.html">
+            
+                <a href="单元测试.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="性能优化.html">
+            
+                <a href="性能优化.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="矩形计算器.html">
+            
+                <a href="矩形计算器.html">
+            
+                    
+                    案例实战：矩形计算器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="H5内置控件.html">
+            
+                <a href="H5内置控件.html">
+            
+                    
+                    H5内置控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="数据合法性校验.html">
+            
+                <a href="数据合法性校验.html">
+            
+                    
+                    数据合法性校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="第三方组件.html">
+            
+                <a href="第三方组件.html">
+            
+                    
+                    第三方组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >静态代码检查</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;">&#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;</h2>
+<h3 id="grunt">GRUNT</h3>
+<ul>
+<li><p><code>JavaScript</code> &#x4E16;&#x754C;&#x7684;&#x6784;&#x5EFA;&#x5DE5;&#x5177;</p>
+</li>
+<li><p>&#x4E3A;&#x4F55;&#x8981;&#x7528;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#xFF1F;</p>
+</li>
+</ul>
+<p>&#x4E00;&#x53E5;&#x8BDD;&#xFF1A;&#x81EA;&#x52A8;&#x5316;&#x3002;&#x5BF9;&#x4E8E;&#x9700;&#x8981;&#x53CD;&#x590D;&#x91CD;&#x590D;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x538B;&#x7F29;&#xFF08;<code>minification</code>&#xFF09;&#x3001;&#x7F16;&#x8BD1;&#x3001;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x3001;<code>linting</code>&#x7B49;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x5DE5;&#x5177;&#x53EF;&#x4EE5;&#x51CF;&#x8F7B;&#x4F60;&#x7684;&#x52B3;&#x52A8;&#xFF0C;&#x7B80;&#x5316;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x5F53;&#x4F60;&#x5728;<code>Gruntfile.js</code>&#x6587;&#x4EF6;&#x6B63;&#x786E;&#x914D;&#x7F6E;&#x597D;&#x4E86;&#x4EFB;&#x52A1;&#xFF0C;&#x4EFB;&#x52A1;&#x8FD0;&#x884C;&#x5668;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x5E2E;&#x4F60;&#x6216;&#x4F60;&#x7684;&#x5C0F;&#x7EC4;&#x5B8C;&#x6210;&#x5927;&#x90E8;&#x5206;&#x65E0;&#x804A;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">grunt</span>)</span>{
+  grunt.initConfig({<span class="hljs-comment">// grunt&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; &#x5BF9;&#x4E8E;&#x53C2;&#x6570; &#x4EFB;&#x52A1;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</span>
+    less:{
+      development: {
+        files: {
+          <span class="hljs-string">&apos;css/layout.css&apos;</span>: <span class="hljs-string">&apos;less/layout.less&apos;</span>
+        }
+      }
+    }
+  });
+
+  grunt.loadNpmTasks(<span class="hljs-string">&apos;grunt-contrib-less&apos;</span>);<span class="hljs-comment">// &#x5B9A;&#x4E49;&#x52A0;&#x8F7D;&#x54EA;&#x4E9B;&#x63D2;&#x4EF6;</span>
+
+  grunt.registerTask(<span class="hljs-string">&apos;default&apos;</span>,[<span class="hljs-string">&apos;less&apos;</span>]);<span class="hljs-comment">// &#x6267;&#x884C;&#x6784;&#x5EFA;&#x4EFB;&#x52A1;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4EC0;&#x4E48; &#x5C31;&#x9700;&#x8981;grunt xxx &#x5176;&#x4E2D;defalut&#x53EF;&#x4EE5;&#x4E0D;&#x5199;&#x540E;&#x9762;&#x7684;xxx</span>
+};
+</code></pre>
+<h3 id="&#x6848;&#x4F8B;&#x4F53;&#x73B0;&#xFF1A;less-&#x9884;&#x5904;&#x7406;">&#x6848;&#x4F8B;&#x4F53;&#x73B0;&#xFF1A;LESS &#x9884;&#x5904;&#x7406;</h3>
+<ul>
+<li>&#x9605;&#x8BFB; <a href="https://www.npmjs.com/package/grunt-contrib-less" target="_blank">grunt-contrib-less &#x63D2;&#x4EF6;&#x6587;&#x6863;</a></li>
+<li>&#x5728; grunt-demo &#x4ED3;&#x5E93;&#x6DFB;&#x52A0; less &#x5206;&#x652F;</li>
+<li>&#x5728; less &#x5206;&#x652F;&#x6DFB;&#x52A0; index.html &#x9875;&#x9762;&#x548C; LESS &#x6837;&#x5F0F;</li>
+<li>npm &#x5B89;&#x88C5; grunt &#x548C; grunt-contrib-less &#x63D2;&#x4EF6;</li>
+<li>&#x6DFB;&#x52A0; Gruntfile.js&#xFF0C;&#x5B9E;&#x73B0; LESS &#x9884;&#x5904;&#x7406;</li>
+<li>&#x6267;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x4EFB;&#x52A1;&#xFF0C;&#x89C2;&#x5BDF;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;&#x6267;&#x884C;&#x7684;&#x6548;&#x679C;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># 1. &#x6DFB;&#x52A0;&#x4EE3;&#x7801;&#x6587;&#x4EF6;</span>
+~/grunt-demo(less) &#xBB; tree -I node_modules
+.
+&#x251C;&#x2500;&#x2500; css
+&#x2502;   &#x2514;&#x2500;&#x2500; layout.css
+&#x251C;&#x2500;&#x2500; Gruntfile.js
+&#x251C;&#x2500;&#x2500; index.html
+&#x251C;&#x2500;&#x2500; less
+&#x2502;   &#x2514;&#x2500;&#x2500; layout.less
+&#x2514;&#x2500;&#x2500; package.json
+
+<span class="hljs-comment"># 2. &#x5B89;&#x88C5;&#x63D2;&#x4EF6;</span>
+~/grunt-demo(less) &#xBB; npm i -D grunt grunt-contrib-less
+
+<span class="hljs-comment"># 3. &#x7F16;&#x5199;Gruntfile.js&#x6587;&#x4EF6;</span>
+<span class="hljs-comment"># 4. &#x6267;&#x884C;grunt&#x547D;&#x4EE4; &#x89C2;&#x770B;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;<code>index.html</code> <code>layout.less</code> <code>Gruntfile.js</code>&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>grunt less demo<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;css/layout.css&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!--&#x901A;&#x8FC7;grunt&#x5BF9;less&#x6587;&#x4EF6;&#x52A0;&#x4E0B;&#x7684;layout.less&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;&#x5F97;&#x5230;css&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;layout.css--&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://spa.wangding.in&quot;</span>&gt;</span>SPA&#x8BFE;&#x7A0B;&#x6750;&#x6599;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small&quot;</span>&gt;</span>This is a small div<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;big&quot;</span>&gt;</span>This a big div<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span>&gt;</span>&#x5E8A;&#x524D;&#x660E;&#x6708;&#x5149;&#xFF0C;&#x7591;&#x662F;&#x5730;&#x4E0A;&#x971C;&#xFF0C;&#x73BB;&#x7483;&#x4E0D;&#x53CA;&#x65F6;&#x64E6;&#xFF0C;&#x6574;&#x4E0D;&#x597D;&#x5C31;&#x5F97;&#x810F;<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-less"><span class="hljs-variable">@yellow:</span>yellow;
+<span class="hljs-selector-tag">a</span>{
+  <span class="hljs-attribute">background-color</span>:<span class="hljs-variable">@yellow</span>;
+}
+<span class="hljs-selector-tag">blockquote</span>{
+  <span class="hljs-attribute">background-color</span>:<span class="hljs-variable">@yellow</span>;
+}
+<span class="hljs-selector-class">.box</span>(<span class="hljs-variable">@width</span>,<span class="hljs-variable">@height</span>,<span class="hljs-variable">@color</span>){
+  <span class="hljs-attribute">width</span>:<span class="hljs-variable">@width</span>;
+  <span class="hljs-attribute">height</span>:<span class="hljs-variable">@height</span>;
+  <span class="hljs-attribute">background-color</span>:<span class="hljs-variable">@color</span>;
+  <span class="hljs-attribute">birder</span>:<span class="hljs-number">1px</span> solid;
+}
+<span class="hljs-selector-class">.small</span>{
+  <span class="hljs-selector-class">.box</span>(<span class="hljs-number">100px</span>,<span class="hljs-number">50px</span>,green);
+}
+<span class="hljs-selector-class">.big</span>{
+  <span class="hljs-selector-class">.box</span>(<span class="hljs-number">300px</span>,<span class="hljs-number">200px</span>,red);
+}
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">grunt</span>)</span>{
+  grunt.initConfig({
+    less:{
+      development: {
+        files: {
+          <span class="hljs-string">&apos;css/layout.css&apos;</span>: <span class="hljs-string">&apos;less/layout.less&apos;</span>
+        }
+      }
+    }
+  });
+  grunt.loadNpmTasks(<span class="hljs-string">&apos;grunt-contrib-less&apos;</span>);
+  grunt.registerTask(<span class="hljs-string">&apos;default&apos;</span>,[<span class="hljs-string">&apos;less&apos;</span>]);
+};
+</code></pre>
+<h3 id="&#x6848;&#x4F8B;&#x4F53;&#x73B0;&#xFF1A;html-&#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;">&#x6848;&#x4F8B;&#x4F53;&#x73B0;&#xFF1A;HTML &#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;</h3>
+<ul>
+<li>&#x9605;&#x8BFB; <a href="https://www.npmjs.com/package/grunt-htmlhint" target="_blank">grunt-htmlhint &#x63D2;&#x4EF6;&#x6587;&#x6863;</a></li>
+<li>&#x9605;&#x8BFB; <a href="https://segmentfault.com/a/1190000013276858" target="_blank">htmlhint &#x89C4;&#x5219;&#x6587;&#x6863;</a></li>
+<li>&#x5728; grunt-demo &#x4ED3;&#x5E93;&#x6DFB;&#x52A0; <code>htmlhint</code> &#x5206;&#x652F;&#xFF0C;&#x5728; <code>htmlhint</code> &#x5206;&#x652F;&#x590D;&#x5236; rectangle &#x4ED3;&#x5E93;&#x7684; index.html&#x4EE3;&#x7801;&#x6587;&#x4EF6;</li>
+<li>&#x6DFB;&#x52A0; <code>.htmlhintrc</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li><code>npm</code> &#x5B89;&#x88C5; grunt &#x548C; grunt-htmlhint &#x63D2;&#x4EF6;</li>
+<li>&#x6DFB;&#x52A0; Gruntfile.js&#xFF0C;&#x5B9E;&#x73B0; HTML &#x4EE3;&#x7801;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;</li>
+<li>&#x6267;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x4EFB;&#x52A1;&#xFF0C;&#x89C2;&#x5BDF;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;&#x6267;&#x884C;&#x7684;&#x6548;&#x679C;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># 1. &#x590D;&#x5236;&#x6587;&#x4EF6;&#x5E76;&#x4E14;&#x6DFB;&#x52A0;&#x7F16;&#x5199;.htmlhintrc&#x6587;&#x4EF6;</span>
+~/grunt-demo(htmlhint) &#xBB; cat .htmlhintrc
+{
+  <span class="hljs-string">&quot;tagname-lowercase&quot;</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment"># &#x5C0F;&#x5199;&#x7684;&#x6807;&#x7B7E;</span>
+  <span class="hljs-string">&quot;attr-lowercase&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;attr-value-double-quotes&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;attr-value-not-empty&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;attr-no-duplication&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;doctype-first&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;tag-pair&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;tag-self-close&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;spec-char-escape&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;id-unique&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;src-not-empty&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;title-require&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;alt-require&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;doctype-html5&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;id-class-value&quot;</span>: <span class="hljs-string">&quot;dash&quot;</span>,
+  <span class="hljs-string">&quot;style-disabled&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;inline-style-disabled&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;inline-script-disabled&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;space-tab-mixed-disabled&quot;</span>: <span class="hljs-string">&quot;space&quot;</span>,
+  <span class="hljs-string">&quot;id-class-ad-disabled&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;href-abs-or-rel&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;attr-unsafe-chars&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;head-script-disabled&quot;</span>: <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-comment"># 2. &#x5B89;&#x88C5;grunt&#x548C;grunt-htmlhint&#x63D2;&#x4EF6;</span>
+~/grunt-demo(htmlhint*) &#xBB; npm i -D grunt grunt-htmlhint
+
+<span class="hljs-comment"># 3. &#x7F16;&#x5199;Gruntfile.js&#x6587;&#x4EF6; &#x6267;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;</span>
+~/grunt-demo(htmlhint*) &#xBB; grunt
+Running <span class="hljs-string">&quot;htmlhint:html&quot;</span> (htmlhint) task
+   index.html
+      L8 |&lt;BODY&gt;
+          ^ The html element name of [ BODY ] must be <span class="hljs-keyword">in</span> lowercase. (tagname-lowercase)
+      L26 |&lt;/BODY&gt;
+           ^ The html element name of [ BODY ] must be <span class="hljs-keyword">in</span> lowercase. (tagname-lowercase)
+&gt;&gt; 2 errors <span class="hljs-keyword">in</span> 1 files
+Warning: Task <span class="hljs-string">&quot;htmlhint:html&quot;</span> failed. Use --force to continue.
+Aborted due to warnings.
+
+<span class="hljs-comment"># 4. &#x9047;&#x5230;&#x9519;&#x8BEF;&#x4FEE;&#x6B63;index.html&#x6587;&#x4EF6; &#x8FDB;&#x884C;&#x68C0;&#x67E5;</span>
+~/grunt-demo(htmlhint*) &#xBB; grunt
+Running <span class="hljs-string">&quot;htmlhint:html&quot;</span> (htmlhint) task
+&gt;&gt; 1 file lint free.
+Done.
+</code></pre>
+<p>&#x5176;&#x4E2D; <code>Gruntfile.js</code> &#x6587;&#x4EF6;&#x663E;&#x793A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">grunt</span>)</span>{
+  grunt.initConfig({
+    htmlhint:{
+      html:{
+        options:{
+          htmlhintrc:<span class="hljs-string">&apos;.htmlhintrc&apos;</span>
+        },
+        src:[<span class="hljs-string">&apos;*.html&apos;</span>]
+      }
+    }
+  });
+
+  grunt.loadNpmTasks(<span class="hljs-string">&apos;grunt-htmlhint&apos;</span>);
+
+  grunt.registerTask(<span class="hljs-string">&apos;default&apos;</span>,[<span class="hljs-string">&apos;htmlhint&apos;</span>]);
+};
+</code></pre>
+<h3 id="&#x6848;&#x4F8B;&#x4F53;&#x73B0;&#xFF1A;css-&#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;">&#x6848;&#x4F8B;&#x4F53;&#x73B0;&#xFF1A;CSS &#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;</h3>
+<ul>
+<li>&#x9605;&#x8BFB; <a href="https://www.npmjs.com/package/grunt-contrib-csslint" target="_blank">grunt-contrib-csslint &#x63D2;&#x4EF6;&#x6587;&#x6863;</a></li>
+<li>&#x9605;&#x8BFB; <a href="https://github.com/CSSLint/csslint/wiki/Rules" target="_blank">csslint &#x89C4;&#x5219;&#x6587;&#x6863;</a></li>
+<li>&#x5728; grunt-demo &#x4ED3;&#x5E93;&#x6DFB;&#x52A0; csslint &#x5206;&#x652F;</li>
+<li>&#x5728; csslint &#x5206;&#x652F;&#x590D;&#x5236; rectangle &#x4ED3;&#x5E93;&#x7684;rectangle.css&#x4E09;&#x4E2A;&#x4EE3;&#x7801;&#x6587;&#x4EF6;</li>
+<li>&#x6DFB;&#x52A0; .csslintrc &#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>npm &#x5B89;&#x88C5; grunt &#x548C; grunt-contrib-csslint &#x63D2;&#x4EF6;</li>
+<li>&#x6DFB;&#x52A0; Gruntfile.js&#xFF0C;&#x5B9E;&#x73B0; CSS &#x4EE3;&#x7801;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;</li>
+<li>&#x6267;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x4EFB;&#x52A1;&#xFF0C;&#x89C2;&#x5BDF;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;&#x6267;&#x884C;&#x7684;&#x6548;&#x679C;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># 1. &#x521B;&#x5EFA;&#x5206;&#x652F; &#x590D;&#x5236;&#x6587;&#x4EF6;&#x5E76;&#x586B;&#x5199;.csslintrc&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+~/grunt-demo(csslint) &#xBB; cat .csslintrc
+{
+  <span class="hljs-string">&quot;ids&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment"># &#x652F;&#x6301;id&#x9009;&#x62E9;&#x5668;</span>
+  <span class="hljs-string">&quot;universal-selector&quot;</span>:<span class="hljs-literal">false</span> <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x901A;&#x914D;&#x7B26;&#x9009;&#x62E9;&#x5668;&#x914D;&#x7F6E;&#x9879;</span>
+}
+
+<span class="hljs-comment"># 2. &#x5B89;&#x88C5;grunt&#x548C;grunt-contrib-csslint&#x63D2;&#x4EF6;</span>
+~/grunt-demo(csslint) &#xBB; npm i -D grunt grunt-contrib-csslint
+
+<span class="hljs-comment"># 3. &#x6DFB;&#x52A0;Gruntfile.js&#x6587;&#x4EF6;</span>
+<span class="hljs-comment"># 4. &#x8FD0;&#x884C;grunt&#x547D;&#x4EE4;&#x4FEE;&#x6B63;css&#x4EE3;&#x7801;&#x6587;&#x4EF6;</span>
+~/grunt-demo(csslint) &#xBB; grunt
+Running <span class="hljs-string">&quot;csslint:src&quot;</span> (csslint) task
+&gt;&gt; 1 file lint free.
+
+Done.
+</code></pre>
+<p>&#x5176;&#x4E2D; <code>Gruntfile.js</code> &#x6587;&#x4EF6;&#x663E;&#x793A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">grunt</span>)</span>{
+  grunt.initConfig({
+    csslint:{
+      options: {
+          csslintrc: <span class="hljs-string">&apos;.csslintrc&apos;</span>
+      },
+      src: [<span class="hljs-string">&apos;*.css&apos;</span>]
+    }
+  });
+
+  grunt.loadNpmTasks(<span class="hljs-string">&apos;grunt-contrib-csslint&apos;</span>);
+
+  grunt.registerTask(<span class="hljs-string">&apos;default&apos;</span>,[<span class="hljs-string">&apos;csslint&apos;</span>]);
+};
+</code></pre>
+<h3 id="&#x6848;&#x4F8B;&#x4F53;&#x73B0;&#xFF1A;javascript-&#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;">&#x6848;&#x4F8B;&#x4F53;&#x73B0;&#xFF1A;JavaScript &#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;</h3>
+<ul>
+<li>&#x9605;&#x8BFB; <a href="https://www.npmjs.com/package/grunt-eslint" target="_blank">grunt-eslint &#x63D2;&#x4EF6;&#x6587;&#x6863;</a></li>
+<li>&#x9605;&#x8BFB; <a href="http://eslint.cn/docs/rules/" target="_blank">eslint &#x89C4;&#x5219;&#x6587;&#x6863;</a></li>
+<li>&#x5728; grunt-demo &#x4ED3;&#x5E93;&#x6DFB;&#x52A0; eslint &#x5206;&#x652F;</li>
+<li>&#x5728; eslint &#x5206;&#x652F;&#x590D;&#x5236; rectangle &#x4ED3;&#x5E93;&#x7684;rectangle.js &#x4E09;&#x4E2A;&#x4EE3;&#x7801;&#x6587;&#x4EF6;</li>
+<li>&#x6DFB;&#x52A0; .eslintrc.json &#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>npm &#x5B89;&#x88C5; grunt &#x548C; grunt-eslint &#x63D2;&#x4EF6;</li>
+<li>&#x6DFB;&#x52A0; Gruntfile.js&#xFF0C;&#x5B9E;&#x73B0; JavaScript &#x4EE3;&#x7801;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x68C0;&#x67E5;</li>
+<li>&#x6267;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x4EFB;&#x52A1;&#xFF0C;&#x89C2;&#x5BDF;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;&#x6267;&#x884C;&#x7684;&#x6548;&#x679C;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># 1. &#x521B;&#x5EFA;&#x5206;&#x652F; &#x590D;&#x5236;&#x6587;&#x4EF6;&#x5E76;&#x586B;&#x5199;.eslintrc.json&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+~/grunt-demo(eslint) &#xBB; cat .eslintrc.json
+{
+  <span class="hljs-string">&quot;env&quot;</span>: {
+      <span class="hljs-string">&quot;browser&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-string">&quot;jquery&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-string">&quot;node&quot;</span>: <span class="hljs-literal">true</span>
+  },
+  <span class="hljs-string">&quot;extends&quot;</span>: <span class="hljs-string">&quot;eslint:recommended&quot;</span>,
+  <span class="hljs-string">&quot;rules&quot;</span>: {
+    <span class="hljs-string">&quot;indent&quot;</span>: [<span class="hljs-string">&quot;error&quot;</span>,2,
+        {<span class="hljs-string">&quot;SwitchCase&quot;</span>: 1,<span class="hljs-string">&quot;VariableDeclarator&quot;</span>: {<span class="hljs-string">&quot;var&quot;</span>: 2, <span class="hljs-string">&quot;let&quot;</span>: 2, <span class="hljs-string">&quot;const&quot;</span>: 3}}],
+          <span class="hljs-string">&quot;linebreak-style&quot;</span>: [<span class="hljs-string">&quot;error&quot;</span>,<span class="hljs-string">&quot;unix&quot;</span>],
+          <span class="hljs-string">&quot;quotes&quot;</span>: [<span class="hljs-string">&quot;error&quot;</span>,<span class="hljs-string">&quot;single&quot;</span>],
+          <span class="hljs-string">&quot;semi&quot;</span>: [<span class="hljs-string">&quot;error&quot;</span>,<span class="hljs-string">&quot;always&quot;</span>]
+      }
+}
+
+<span class="hljs-comment"># 2. &#x5B89;&#x88C5;grunt&#x548C;grunt-eslint&#x63D2;&#x4EF6;</span>
+~/grunt-demo(eslint) &#xBB; npm i -D grunt grunt-eslint 
+
+<span class="hljs-comment"># 3. &#x6DFB;&#x52A0;Gruntfile.js&#x6587;&#x4EF6;</span>
+<span class="hljs-comment"># 4. &#x8FD0;&#x884C;grunt&#x547D;&#x4EE4;&#x4FEE;&#x6B63;js&#x4EE3;&#x7801;&#x6587;&#x4EF6;</span>
+~/grunt-demo(eslint*) &#xBB; grunt
+Running <span class="hljs-string">&quot;eslint:target&quot;</span> (eslint) task
+
+Done.
+</code></pre>
+<p>&#x5176;&#x4E2D; <code>Gruntfile.js</code> &#x6587;&#x4EF6;&#x663E;&#x793A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">grunt</span>)</span>{
+  grunt.initConfig({
+    eslint:{
+      options: {
+        configFile: <span class="hljs-string">&apos;.eslintrc.json&apos;</span>    
+      },
+      target: [<span class="hljs-string">&apos;rectangle.js&apos;</span>]
+    }
+  });
+
+  grunt.loadNpmTasks(<span class="hljs-string">&apos;grunt-eslint&apos;</span>);
+
+  grunt.registerTask(<span class="hljs-string">&apos;default&apos;</span>,[<span class="hljs-string">&apos;eslint&apos;</span>]);
+};
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="自动化构建.html" class="navigation navigation-prev " aria-label="Previous page: 自动化构建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="单元测试.html" class="navigation navigation-next " aria-label="Next page: 单元测试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"静态代码检查","level":"1.3","depth":1,"next":{"title":"单元测试","level":"1.4","depth":1,"path":"单元测试.md","ref":"单元测试.md","articles":[]},"previous":{"title":"自动化构建","level":"1.2","depth":1,"path":"自动化构建.md","ref":"自动化构建.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"静态代码检查.md","mtime":"2019-04-06T04:41:39.107Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-06T04:42:47.411Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

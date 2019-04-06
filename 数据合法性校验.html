@@ -1,0 +1,738 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据合法性校验 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="第三方组件.html" />
+    
+    
+    <link rel="prev" href="H5内置控件.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="自动化构建.html">
+            
+                <a href="自动化构建.html">
+            
+                    
+                    自动化构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="静态代码检查.html">
+            
+                <a href="静态代码检查.html">
+            
+                    
+                    静态代码检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="单元测试.html">
+            
+                <a href="单元测试.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="性能优化.html">
+            
+                <a href="性能优化.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="矩形计算器.html">
+            
+                <a href="矩形计算器.html">
+            
+                    
+                    案例实战：矩形计算器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="H5内置控件.html">
+            
+                <a href="H5内置控件.html">
+            
+                    
+                    H5内置控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="数据合法性校验.html">
+            
+                <a href="数据合法性校验.html">
+            
+                    
+                    数据合法性校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="第三方组件.html">
+            
+                <a href="第三方组件.html">
+            
+                    
+                    第三方组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >数据合法性校验</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;">&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;</h2>
+<p><img src="images/validation-rectangle.png" alt=""></p>
+<p>&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x6821;&#x9A8C;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x6821;&#x9A8C;</p>
+<p>&#x6821;&#x9A8C;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<ul>
+<li>&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#x503C;&#xFF1A;&#x5C31;<code>rectangle</code>&#x800C;&#x8A00;&#xFF0C;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x503C;</li>
+<li>&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;&#x5C31;<code>rectangle</code>&#x800C;&#x8A00;&#xFF0C;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x5E94;&#x8BE5;&#x662F;&#x6570;&#x503C;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x80FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x6570;&#x636E;&#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;&#x5C31;<code>rectangle</code>&#x800C;&#x8A00;&#xFF0C;&#x5BF9;&#x4E8E;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x5E94;&#x8BE5;&#x662F;&#x6B63;&#x6570;&#x6216;&#x8005;&#x4E3A;0&#xFF0C;&#x4E0D;&#x80FD;&#x4E3A;&#x8D1F;&#x6570;</li>
+<li>&#x6570;&#x636E;&#x6A21;&#x5F0F;&#xFF1A;&#x6BD4;&#x5982;&#x8981;&#x586B;&#x5199;&#x4E00;&#x4E2A;<code>email</code>&#x5730;&#x5740;&#xFF0C;&#x770B;&#x662F;&#x5426;&#x5339;&#x914D;<code>email</code>&#x7684;&#x683C;&#x5F0F;</li>
+</ul>
+<p>&#x6821;&#x9A8C;&#x7684;&#x5206;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>&#x96C6;&#x4E2D;&#x6821;&#x9A8C;&#xFF1A;&#x6BD4;&#x5982;&#x5F53;&#x70B9;&#x51FB;&#x8BA1;&#x7B97;&#x6309;&#x94AE;&#xFF0C;&#x5E94;&#x8BE5;&#x8FDB;&#x884C;&#x6821;&#x9A8C;</li>
+<li>&#x5B57;&#x6BB5;&#x6821;&#x9A8C;&#xFF1A;&#x5728;&#x8F93;&#x5165;&#x5B8C;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x884C;&#x6821;&#x9A8C;</li>
+<li>&#x5B57;&#x7B26;&#x68C0;&#x9A8C;&#xFF1A;&#x5728;&#x8F93;&#x5165;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E4B;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x6821;&#x9A8C;</li>
+</ul>
+<p><img src="images/validation-three.png" alt=""></p>
+<p>&#x4E0A;&#x8FF0;&#x56FE;&#x7247;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF1A;</p>
+<ul>
+<li>&#x5B57;&#x7B26;&#x7EA7;&#x6821;&#x9A8C;&gt; &#x5B57;&#x6BB5;&#x7EA7;&#x6821;&#x9A8C; &gt; &#x96C6;&#x4E2D;&#x6821;&#x9A8C;</li>
+<li>&#x5B57;&#x6BB5;&#x7EA7; = &#x96C6;&#x4E2D;&#x6821;&#x9A8C; + &#x5B57;&#x6BB5;&#x6821;&#x9A8C;</li>
+<li>&#x5B57;&#x7B26;&#x7EA7; = &#x96C6;&#x4E2D;&#x7EA7; + &#x5B57;&#x6BB5;&#x7EA7; + &#x5B57;&#x7B26;&#x7EA7;&#xFF08;&#x5B57;&#x7B26;&#x7EA7;&#x662F;&#x6700;&#x9AD8;&#x7EA7;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x5B57;&#x7B26;&#x7EA7;&#x7684;&#x6821;&#x9A8C;&#x5E94;&#x8BE5;&#x5EFA;&#x7ACB;&#x5728;&#x5B57;&#x6BB5;&#x7EA7;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF09;</li>
+</ul>
+<h3 id="&#x8868;&#x5355;&#x7EA7;&#x6821;&#x9A8C;">&#x8868;&#x5355;&#x7EA7;&#x6821;&#x9A8C;</h3>
+<p>&#x57FA;&#x672C;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>&#x505A;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x65B9;&#x9762;&#x7684;&#x6821;&#x9A8C;&#xFF1A;<ul>
+<li>&#x6570;&#x636E;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</li>
+<li>&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0D;&#x5BF9;&#xFF0C;&#x6570;&#x636E;&#x4E0D;&#x80FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C;&#x5E94;&#x8BE5;&#x662F;&#x6570;&#x5B57;</li>
+<li>&#x6570;&#x636E;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x9519;&#x8BEF;&#xFF0C;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x90FD;&#x5E94;&#x8BE5;&#x5927;&#x4E8E;&#x96F6;</li>
+</ul>
+</li>
+<li>Tab &#x952E;&#x8FDB;&#x884C;&#x7126;&#x70B9;&#x5207;&#x6362;&#x65F6;&#x4E0D;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x9A8C;&#x8BC1;</li>
+<li>&#x952E;&#x76D8;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x65F6;&#x4E0D;&#x5BF9;&#x975E;&#x6CD5;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#xFF0C;&#x4E0D;&#x62E6;&#x622A;&#x975E;&#x6CD5;&#x5B57;&#x7B26;</li>
+<li>&#x53EA;&#x6709;&#x70B9;&#x51FB;&#x8BA1;&#x7B97;&#x6309;&#x94AE;&#x65F6;&#x624D;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;</li>
+<li>&#x51FA;&#x73B0;&#x9A8C;&#x8BC1;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x53EA;&#x62A5;&#x544A;&#x7B2C;&#x4E00;&#x4E2A;&#x9A8C;&#x8BC1;&#x7684;&#x9519;&#x8BEF;</li>
+<li>&#x53EA;&#x6709;&#x6570;&#x636E;&#x9A8C;&#x8BC1;&#x90FD;&#x901A;&#x8FC7;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x8BA1;&#x7B97;&#x77E9;&#x5F62;&#x7684;&#x5468;&#x957F;&#x548C;&#x9762;&#x79EF;</li>
+</ul>
+<p>&#x53C2;&#x8003;&#x793A;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li><a href="https://fe.wangding.in/02-validation/02-form-validation.html" target="_blank">&#x8868;&#x5355;&#x7EA7;&#x9A8C;&#x8BC1;</a></li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x4F8B;&#xFF1A;<a href="https://github.com/fuziwang/rectangle/tree/feat-form-validation" target="_blank">https://github.com/fuziwang/rectangle/tree/feat-form-validation</a></p>
+<pre><code class="lang-js">/*
+    &#x8BF4;&#x660E;&#xFF1A;&#x8868;&#x5355;&#x7EA7;&#x9A8C;&#x8BC1;&#x53EA;&#x9700;&#x8981;&#x5728;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x8BA1;&#x7B97;&#x6309;&#x94AE;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x7A7A;&#x503C; &#x5B57;&#x7B26;&#x4E32; &#x6570;&#x636E;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x7684;&#x9A8C;&#x8BC1;&#x5373;&#x53EF;&#xFF0C;&#x540C;&#x65F6;&#x9700;&#x8981;&#x7ED9;&#x8868;&#x5355;&#x6DFB;&#x52A0;&#x4E24;&#x4E2A;div&#x5757;
+*/
+# rectangle.js
+/* global rectangle: true */
+$(function(){
+  var $width = $(&apos;#width&apos;),
+      $height = $(&apos;#height&apos;),
+      $btnCal = $(&apos;#calculate&apos;),
+      $perimeter = $(&apos;#perimeter&apos;),
+      $area = $(&apos;#area&apos;),
+      $widthValidation = $(&apos;#width-validation&apos;),
+      $heightValidation = $(&apos;#height-validation&apos;);
+
+  $btnCal.click(function(){
+
+    var w = $width.val(),
+        h = $height.val();
+
+    var widthResult = valid(w);
+    var heightResult = valid(h);
+
+    if(!widthResult.isOk){
+      $widthValidation.html(&apos;&#x5BBD;&#x5EA6;&apos; + widthResult.reason);
+      $width.select();
+      return;
+    }
+
+    if(!heightResult.isOk){
+      $heightValidation.html(&apos;&#x9AD8;&#x5EA6;&apos; + heightResult.reason);
+      $height.select();
+      return;
+    }
+
+    $widthValidation.html(&apos;&apos;);
+    $heightValidation.html(&apos;&apos;);
+
+    var rect = rectangle();
+    $perimeter.val(rect.perimeter(w,h));
+    $area.val(rect.area(w,h));
+  });
+
+  $btnCal.mousedown(function(e){// &#x5F53;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x548C;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x4E8B;&#x4EF6;&#x51B2;&#x7A81;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;
+    e.preventDefault();
+  });
+});
+
+# calc.js
+function valid(data){
+  var result = {
+    isOk:false,
+    reason:&apos;&apos;
+  };
+
+  if(data === &apos;&apos;){
+    result.reason = &apos;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&apos;;
+    return result;
+  }
+
+  if(Number(data) &lt; 0){
+    result.reason = &apos;&#x4E0D;&#x80FD;&#x4E3A;&#x8D1F;&#x6570;&apos;;
+    return result;
+  }
+
+  if(!/^-?(0|[1-9]\d*)(\.\d*)?([eE][+-]?\d+)?$/.test(data)){
+    result.reason = &apos;&#x4E0D;&#x662F;&#x5408;&#x6CD5;&#x6570;&#x5B57;&apos;;
+    return result;
+  }
+
+  result.isOk = true;
+  return result;
+}
+</code></pre>
+<h3 id="&#x5B57;&#x6BB5;&#x7EA7;&#x6821;&#x9A8C;">&#x5B57;&#x6BB5;&#x7EA7;&#x6821;&#x9A8C;</h3>
+<p>&#x57FA;&#x672C;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>&#x5BF9;&#x77E9;&#x5F62;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x5B57;&#x6BB5;&#x7EA7;&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;</li>
+<li>&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;&#x7684;&#x65B9;&#x9762;&#x8DDF;&#x8868;&#x5355;&#x7EA7;&#x9A8C;&#x8BC1;&#x76F8;&#x540C;</li>
+<li>&#x5BF9;&#x975E;&#x6CD5;&#x6570;&#x636E;&#x63D0;&#x4F9B;&#x6E05;&#x6670;&#x660E;&#x786E;&#x7684;&#x9519;&#x8BEF;&#x63D0;&#x793A;</li>
+<li>&#x521D;&#x59CB;&#x7126;&#x70B9;&#x5728;&#x5BBD;&#x5EA6;&#x6587;&#x672C;&#x6846;&#x4E0A;&#xFF0C;&#x6309; Tab &#x952E;&#x65F6;&#xFF0C;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;</li>
+<li>&#x5982;&#x679C;&#x6570;&#x636E;&#x4E0D;&#x5408;&#x6CD5;&#xFF0C;Tab &#x952E;&#x4E0D;&#x79FB;&#x52A8;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x6846;</li>
+<li>&#x5982;&#x679C;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF08;&#x4E0A;&#x9762;&#x4E09;&#x79CD;&#x9519;&#x8BEF;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x79CD;&#xFF09;&#xFF0C;&#x70B9;&#x51FB;&#x8BA1;&#x7B97;&#x6309;&#x94AE;&#xFF08;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x591A;&#x6B21;&#xFF09;&#xFF0C;&#x4E0D;&#x5E94;&#x8BE5;&#x8BA1;&#x7B97;&#x51FA;&#x5468;&#x957F;&#x548C;&#x9762;&#x79EF;</li>
+<li>&#x5BF9;&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;&#x6A21;&#x5757;&#x589E;&#x52A0;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#x53C2;&#x8003;&#xFF1A;</p>
+<ul>
+<li><a href="https://github.com/wangding/rectangle/commit/e8acaf597de40fdb8ec3ca32ec0a7c965b9bee41" target="_blank">&#x77E9;&#x5F62;&#x8BA1;&#x7B97;&#x5668; v1.0 &#x5B57;&#x6BB5;&#x7EA7;&#x6821;&#x9A8C;</a></li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x4F8B;&#xFF1A;<a href="https://github.com/fuziwang/rectangle/tree/feat-feild-validation" target="_blank">https://github.com/fuziwang/rectangle/tree/feat-feild-validation</a></p>
+<pre><code class="lang-js">/*
+    &#x9700;&#x8981;&#x5728;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x7684;&#x65F6;&#x5019;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x4E8B;&#x4EF6;
+*/
+# rectangle.js
+/* global rectangle: true */
+$(function(){
+  var $width = $(&apos;#width&apos;),
+      $height = $(&apos;#height&apos;),
+      $btnCal = $(&apos;#calculate&apos;),
+      $perimeter = $(&apos;#perimeter&apos;),
+      $area = $(&apos;#area&apos;),
+      $widthValidation = $(&apos;#width-validation&apos;),
+      $heightValidation = $(&apos;#height-validation&apos;);
+
+  $width.focusout(function(){
+    var w = $width.val();
+
+    var result = valid(w);
+    if(!result.isOk){
+      $widthValidation.html(&apos;&#x5BBD;&#x5EA6;&apos; + result.reason);
+      $width.select();
+      return;
+    }
+    $widthValidation.html(&apos;&apos;);
+  });
+
+  $height.focusout(function(){
+    var h = $height.val();
+
+    var result = valid(h);
+    if(!result.isOk){
+      $heightValidation.html(&apos;&#x9AD8;&#x5EA6;&apos; + result.reason);
+      $height.select();
+      return;
+    } 
+    $heightValidation.html(&apos;&apos;);
+  });
+  $btnCal.click(function(){
+
+    var w = $width.val(),
+        h = $height.val();
+
+    var widthResult = valid(w);
+    var heightResult = valid(h);
+
+    if(!widthResult.isOk){
+      $widthValidation.html(&apos;&#x5BBD;&#x5EA6;&apos; + widthResult.reason);
+      $width.select();
+      return;
+    }
+
+    if(!heightResult.isOk){
+      $heightValidation.html(&apos;&#x9AD8;&#x5EA6;&apos; + heightResult.reason);
+      $height.select();
+      return;
+    }
+
+    $widthValidation.html(&apos;&apos;);
+    $heightValidation.html(&apos;&apos;);
+
+    var rect = rectangle();
+    $perimeter.val(rect.perimeter(w,h));
+    $area.val(rect.area(w,h));
+  });
+
+  $btnCal.mousedown(function(e){// &#x5F53;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x548C;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x4E8B;&#x4EF6;&#x51B2;&#x7A81;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;
+    e.preventDefault();
+  });
+});
+</code></pre>
+<h3 id="&#x5B57;&#x7B26;&#x7EA7;&#x6821;&#x9A8C;">&#x5B57;&#x7B26;&#x7EA7;&#x6821;&#x9A8C;</h3>
+<p>&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x7EA7;&#x6821;&#x9A8C;&#xFF1A;</p>
+<p><img src="images/validation-char.png" alt=""></p>
+<p>&#x57FA;&#x672C;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>&#x5728;&#x5B57;&#x6BB5;&#x7EA7;&#x9A8C;&#x8BC1;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x6DFB;&#x52A0;&#x5B57;&#x7B26;&#x7EA7;&#x9A8C;&#x8BC1;</li>
+<li>&#x5408;&#x6CD5;&#x7684;&#x5B57;&#x7B26;&#x5305;&#x62EC;&#xFF1A;0~9 &#x5341;&#x4E2A;&#x6570;&#x5B57;&#x3001;&#x5C0F;&#x6570;&#x70B9;&#x3001;&#x8D1F;&#x53F7;&#x548C;&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#x7684; e &#x548C; E</li>
+<li>&#x975E;&#x6CD5;&#x5B57;&#x7B26;&#xFF0C;&#x9664;&#x4E86;&#x4E0A;&#x9762;&#x5408;&#x6CD5;&#x5B57;&#x7B26;&#x4EE5;&#x5916;&#x7684;&#x5B57;&#x6BCD;&#x548C;&#x6807;&#x70B9;&#x7B26;&#x53F7;</li>
+<li>&#x5728;&#x77E9;&#x5F62;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x8F93;&#x5165;&#x6846;&#x4E2D;&#x8F93;&#x5165;&#x975E;&#x6CD5;&#x5B57;&#x7B26;&#xFF0C;&#x975E;&#x6CD5;&#x5B57;&#x7B26;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x6587;&#x672C;&#x6846;&#x4E2D;</li>
+<li>&#x5BF9;&#x5B57;&#x7B26;&#x8FC7;&#x6EE4;&#x6A21;&#x5757;&#x589E;&#x52A0;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</li>
+</ul>
+<p>&#x53C2;&#x8003;&#x793A;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li><a href="https://wangding.github.io/rectangle/" target="_blank">&#x77E9;&#x5F62;&#x8BA1;&#x7B97;&#x5668; v1.1 &#x5B57;&#x7B26;&#x7EA7;&#x6821;&#x9A8C;</a></li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x4F8B;&#xFF1A;<a href="https://github.com/fuziwang/rectangle/tree/feat-char-validation" target="_blank">https://github.com/fuziwang/rectangle/tree/feat-char-validation</a></p>
+<pre><code class="lang-js">/*
+    &#x8BF4;&#x660E;&#xFF1A;&#x9700;&#x8981;&#x7ED9;&#x5B57;&#x7B26;&#x6DFB;&#x52A0;keypress&#x4E8B;&#x4EF6; &#x5E76;&#x68C0;&#x9A8C;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x5408;&#x6CD5;
+*/
+# rectangle.js
+/* global rectangle: true */
+$(function(){
+  var $width = $(&apos;#width&apos;),
+      $height = $(&apos;#height&apos;),
+      $btnCal = $(&apos;#calculate&apos;),
+      $perimeter = $(&apos;#perimeter&apos;),
+      $area = $(&apos;#area&apos;),
+      $widthValidation = $(&apos;#width-validation&apos;),
+      $heightValidation = $(&apos;#height-validation&apos;);
+
+  $width.keypress(function(e){
+    if(!isLegalKey(e.key,e.target.value,e.target.selectionStart)){
+      e.preventDefault();
+    }
+  });
+
+  $width.focusout(function(){
+    var w = $width.val();
+
+    var result = valid(w);
+    if(!result.isOk){
+      $widthValidation.html(&apos;&#x5BBD;&#x5EA6;&apos; + result.reason);
+      $width.select();
+      return;
+    }
+    $widthValidation.html(&apos;&apos;);
+  });
+
+  $height.keypress(function(e){
+    if(!isLegalKey(e.key,e.target.value,e.target.selectionStart)){
+      e.preventDefault();
+    }
+  });
+
+  $height.focusout(function(){
+    var h = $height.val();
+
+    var result = valid(h);
+    if(!result.isOk){
+      $heightValidation.html(&apos;&#x9AD8;&#x5EA6;&apos; + result.reason);
+      $height.select();
+      return;
+    } 
+    $heightValidation.html(&apos;&apos;);
+  });
+
+  $btnCal.click(function(){
+
+    var w = $width.val(),
+        h = $height.val();
+
+    var widthResult = valid(w);
+    var heightResult = valid(h);
+
+    if(!widthResult.isOk){
+      $widthValidation.html(&apos;&#x5BBD;&#x5EA6;&apos; + widthResult.reason);
+      $width.select();
+      return;
+    }
+
+    if(!heightResult.isOk){
+      $heightValidation.html(&apos;&#x9AD8;&#x5EA6;&apos; + heightResult.reason);
+      $height.select();
+      return;
+    }
+
+    $widthValidation.html(&apos;&apos;);
+    $heightValidation.html(&apos;&apos;);
+
+    var rect = rectangle();
+    $perimeter.val(rect.perimeter(w,h));
+    $area.val(rect.area(w,h));
+  });
+
+  $btnCal.mousedown(function(e){// &#x5F53;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x548C;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x4E8B;&#x4EF6;&#x51B2;&#x7A81;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;
+    e.preventDefault();
+  });
+});
+
+# calc.js
+function isLegalKey(key,content,pos){
+  if(/[abcdf-zABCDF-Z`~!@#$%^&amp;*()\-=_+[\]{}|;:&apos;&quot;,&lt;&gt;/?\\]/.test(key)){
+    return false;
+  }
+
+  if(key === &apos;.&apos;){
+    if(pos === 0 || content.indexOf(&apos;.&apos;) !== -1) return false;
+    if(pos === 1 &amp;&amp; content.substring(0,1) === &apos;-&apos;) return false;
+  }
+
+  if(key === &apos;e&apos;){
+    if(pos === 0 || content.indexOf(&apos;e&apos;)!== -1 
+         || content.indexOf(&apos;E&apos;)!==-1) return false;
+    if(pos === 1 &amp;&amp; content.substring(0,1) === &apos;-&apos;) return false;
+  }
+
+  if(key === &apos;E&apos;){
+    if(pos === 0 || content.indexOf(&apos;e&apos;)!== -1 
+         || content.indexOf(&apos;E&apos;)!==-1) return false;
+    if(pos === 1 &amp;&amp; content.substring(0,1) === &apos;-&apos;) return false;
+  }
+  return true;
+}
+</code></pre>
+<h3 id="h5-&#x6821;&#x9A8C;">H5 &#x6821;&#x9A8C;</h3>
+<p><img src="images/validation-h5.png" alt=""></p>
+<p>&#x57FA;&#x672C;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>&#x5229;&#x7528; H5 &#x5185;&#x7F6E;&#x63A7;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;&#x529F;&#x80FD;</li>
+<li>&#x5B9E;&#x73B0;&#x5B57;&#x6BB5;&#x7EA7;&#x548C;&#x5B57;&#x7B26;&#x7EA7;&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;</li>
+<li>&#x901A;&#x5F80; H5 &#x9A8C;&#x8BC1;&#x7684;&#x4F2A;&#x7C7B;&#x6765;&#x63D0;&#x4F9B;&#x6570;&#x636E;&#x9A8C;&#x8BC1;&#x4E0E;&#x5426;&#x7684;&#x6807;&#x8BB0;</li>
+</ul>
+<p>&#x53C2;&#x8003;&#x793A;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li><a href="https://fe.wangding.in/02-validation/03-h5-validation.html" target="_blank">H5 &#x6821;&#x9A8C;</a></li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x5B9E;&#x4F8B;&#xFF1A;<a href="https://github.com/fuziwang/rectangle/tree/feat-h5-validation" target="_blank">https://github.com/fuziwang/rectangle/tree/feat-h5-validation</a></p>
+<pre><code class="lang-js">/*
+    &#x8BF4;&#x660E;&#xFF1A;H5&#x6821;&#x9A8C;&#x662F;&#x901A;&#x8FC7;H5&#x7684;&#x5185;&#x7F6E;&#x63A7;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x6570;&#x636E;&#x5408;&#x6CD5;&#x6027;&#x6821;&#x9A8C;&#xFF0C;&#x9700;&#x8981;&#x6539;&#x53D8;html&#x548C;css&#x6587;&#x4EF6;&#xFF0C;&#x9488;&#x5BF9;js&#x6587;&#x4EF6;&#x4E0D;&#x8BB8;&#x8FDB;&#x884C;&#x5927;&#x90E8;&#x5206;&#x6539;&#x53D8;
+*/
+# rectangle.js
+$(function(){
+  var $width = $(&apos;#width&apos;),
+      $height = $(&apos;#height&apos;),
+      $form = $(&apos;form&apos;),
+      $perimeter = $(&apos;#perimeter&apos;),
+      $area = $(&apos;#area&apos;),
+      $widthValidation = $(&apos;#width-validation&apos;),
+      $heightValidation = $(&apos;#height-validation&apos;);
+
+  $form.submit(function(e){
+    var w = $width.val(),
+        h = $height.val();
+
+    var rect = rectangle();
+    $perimeter.val(rect.perimeter(w,h));
+    $area.val(rect.area(w,h));
+    e.preventDefault();
+  });
+});
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x77E9;&#x5F62;&#x8BA1;&#x7B97;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;rectangle.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;width&quot;</span>&gt;</span>&#x5BBD;&#x5EA6;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;width&quot;</span> <span class="hljs-attr">required</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">step</span>=<span class="hljs-string">&quot;0.01&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;height&quot;</span>&gt;</span>&#x9AD8;&#x5EA6;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;height&quot;</span> <span class="hljs-attr">required</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">step</span>=<span class="hljs-string">&quot;0.01&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;calculate&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x8BA1;&#x7B97;&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;perimeter&quot;</span>&gt;</span>&#x5468;&#x957F;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;perimeter&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;area&quot;</span>&gt;</span>&#x9762;&#x79EF;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;area&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- build:js bundle.min.js --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;calc.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;rectangle.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- endbuild --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:invalid+span</span><span class="hljs-selector-pseudo">:after</span>{
+  <span class="hljs-attribute">content</span>:<span class="hljs-string">&apos;&#x2716;&apos;</span>;
+  <span class="hljs-attribute">color</span>:red;
+}
+<span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:valid+span</span><span class="hljs-selector-pseudo">:after</span>{
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">&apos;&#x2713;&apos;</span>;
+  <span class="hljs-attribute">color</span>: green;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="H5内置控件.html" class="navigation navigation-prev " aria-label="Previous page: H5内置控件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="第三方组件.html" class="navigation navigation-next " aria-label="Next page: 第三方组件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据合法性校验","level":"1.8","depth":1,"next":{"title":"第三方组件","level":"1.9","depth":1,"path":"第三方组件.md","ref":"第三方组件.md","articles":[]},"previous":{"title":"H5内置控件","level":"1.7","depth":1,"path":"H5内置控件.md","ref":"H5内置控件.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数据合法性校验.md","mtime":"2019-04-06T04:41:39.107Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-06T04:42:47.411Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
